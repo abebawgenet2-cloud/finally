@@ -1,0 +1,1164 @@
+
+/* =========================================================
+   GENET ABEBAW PERSONAL BIOGRAPHY WEBSITE
+   Elegant and Professional Website Design
+
+   Color Theme:
+   Cream       #F5F1E9
+   Navy        #24334B
+   Sage Green  #718A69
+   Gold        #D8B97B
+
+   External CSS for all website pages
+========================================================= */
+
+
+/* =========================================================
+   1. GENERAL SETTINGS
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #F5F1E9;
+    color: #29364B;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+::selection {
+    background-color: #D8B97B;
+    color: #24334B;
+}
+
+
+/* =========================================================
+   2. WEBSITE HEADER
+========================================================= */
+
+.site-header {
+    text-align: center;
+    padding: 45px 20px 30px;
+    background-color: #F5F1E9;
+}
+
+.site-label,
+.section-label {
+    color: #718A69;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.site-header h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #24334B;
+    margin: 10px 0;
+}
+
+.tagline {
+    color: #718A69;
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   3. MAIN NAVIGATION
+========================================================= */
+
+.main-navigation {
+    background-color: #24334B;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar li a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px 22px;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    color: #24334B;
+    background-color: #D8B97B;
+}
+
+
+/* Navigation underline effect */
+
+.main-navigation a::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+    width: 0;
+    height: 2px;
+    background-color: #D8B97B;
+    transition: width 0.3s ease;
+}
+
+.main-navigation a:hover::after {
+    width: calc(100% - 30px);
+}
+
+
+/* =========================================================
+   4. DROPDOWN NAVIGATION MENUS
+========================================================= */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 210px;
+    background-color: #24334B;
+    list-style: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    color: #FFFFFF;
+    padding: 12px 18px;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #718A69;
+    color: #FFFFFF;
+}
+
+
+/* Nested Education Dropdown */
+
+.dropdown-menu .dropdown {
+    position: relative;
+}
+
+.dropdown-menu .dropdown > .dropdown-menu {
+    top: 0;
+    left: 100%;
+}
+
+
+/* =========================================================
+   5. MAIN CONTENT
+========================================================= */
+
+main {
+    width: 90%;
+    max-width: 1150px;
+    margin: 40px auto;
+}
+
+
+/* =========================================================
+   6. HOMEPAGE HERO SECTION
+========================================================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    padding: 45px;
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(36, 51, 75, 0.08);
+}
+
+.hero-content,
+.hero-text {
+    flex: 1;
+}
+
+.welcome-text {
+    color: #718A69;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.hero-content h2,
+.hero-text h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #24334B;
+    margin: 15px 0;
+}
+
+.hero-content h3,
+.hero-text h3 {
+    color: #718A69;
+    margin-bottom: 15px;
+}
+
+.hero-content p,
+.hero-text p {
+    margin-bottom: 15px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 350px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid #E8EEE3;
+}
+
+
+/* =========================================================
+   7. BUTTONS
+========================================================= */
+
+.primary-button {
+    display: inline-block;
+    background-color: #718A69;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: #24334B;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+button {
+    display: inline-block;
+    background-color: #24334B;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #718A69;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   8. CONTENT SECTIONS
+========================================================= */
+
+.content-section {
+    background-color: #FFFFFF;
+    padding: 35px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(36, 51, 75, 0.05);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2,
+.content-section h2,
+.career-section h2 {
+    font-family: Georgia, serif;
+    color: #24334B;
+    font-size: 28px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.content-section p {
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   9. INTEREST CARDS
+========================================================= */
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.interest-card {
+    background-color: #F5F1E9;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #718A69;
+    transition: all 0.3s ease;
+}
+
+.interest-card h3 {
+    color: #24334B;
+    margin-bottom: 10px;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+    background-color: #E8EEE3;
+    box-shadow: 0 5px 15px rgba(36, 51, 75, 0.08);
+}
+
+
+/* =========================================================
+   10. EDUCATION LIST
+========================================================= */
+
+.education-list {
+    padding-left: 25px;
+    margin: 20px 0;
+}
+
+.education-list li {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   11. CAREER SECTION
+========================================================= */
+
+.career-section {
+    background-color: #E8EEE3;
+    padding: 40px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 15px;
+    border-left: 5px solid #718A69;
+}
+
+.career-section p {
+    max-width: 750px;
+    margin: 15px auto;
+}
+
+.career-section details {
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.career-section summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #24334B;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   12. PROFILE IMAGES
+========================================================= */
+
+.profile-image {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 25px auto;
+    border: 5px solid #D8B97B;
+}
+
+.about-profile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 25px 10px;
+}
+
+.about-photo {
+    flex: 0 0 300px;
+    text-align: center;
+}
+
+.about-photo .profile-image {
+    width: 100%;
+    max-width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid #718A69;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-information {
+    flex: 1;
+    text-align: left;
+}
+
+.about-information h2 {
+    color: #24334B;
+    margin-bottom: 18px;
+}
+
+.about-information p {
+    line-height: 1.9;
+    margin-bottom: 14px;
+    color: #29364A;
+}
+
+
+/* =========================================================
+   13. EDUCATION PHOTO GALLERY
+========================================================= */
+
+.education-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.education-gallery article {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(36, 51, 75, 0.08);
+}
+
+.education-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.education-gallery h3 {
+    margin-top: 12px;
+    color: #24334B;
+}
+
+
+/* =========================================================
+   14. GENERAL IMAGE GALLERY
+========================================================= */
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   15. SUN PHOTOGRAPH GALLERY
+========================================================= */
+
+.sun-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.sun-gallery figure {
+    background-color: #FFFFFF;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+    text-align: center;
+}
+
+.sun-gallery img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 9px;
+    transition: transform 0.3s ease;
+}
+
+.sun-gallery img:hover {
+    transform: scale(1.03);
+}
+
+.sun-gallery figcaption {
+    padding: 12px;
+    color: #24334B;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   16. EDUCATION TABLE
+========================================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+}
+
+.education-table th,
+.education-table td {
+    border: 1px solid #D8DED3;
+    padding: 13px;
+    text-align: left;
+}
+
+.education-table th {
+    background-color: #24334B;
+    color: #FFFFFF;
+}
+
+.education-table tr:nth-child(even) {
+    background-color: #F5F1E9;
+}
+
+.education-table tr:hover {
+    background-color: #E8EEE3;
+}
+
+
+/* =========================================================
+   17. EDUCATION IMAGES
+========================================================= */
+
+.education-image {
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    border: 4px solid #E8EEE3;
+}
+
+
+/* =========================================================
+   18. SKILLS AND PROGRESS BARS
+========================================================= */
+
+.skills,
+.skill-item {
+    margin: 20px 0;
+}
+
+.skills h3,
+.skill-item h3 {
+    color: #24334B;
+    margin-bottom: 8px;
+}
+
+progress {
+    width: 100%;
+    height: 17px;
+    accent-color: #718A69;
+}
+
+
+/* =========================================================
+   19. HOBBIES AND ARTICLES
+========================================================= */
+
+.content-section article {
+    background-color: #F5F1E9;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border-left: 4px solid #718A69;
+}
+
+.content-section article h3 {
+    color: #24334B;
+    margin-bottom: 10px;
+}
+
+.hobby-card {
+    margin-bottom: 25px;
+}
+
+.hobby-card h2 {
+    color: #24334B;
+    margin-bottom: 15px;
+}
+
+.hobby-card p {
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   20. AUDIO AND VIDEO
+========================================================= */
+
+.media-container {
+    max-width: 750px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.media-container audio,
+audio {
+    width: 100%;
+    max-width: 450px;
+    margin: 15px 0;
+}
+
+.media-container video {
+    display: block;
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    background-color: #24334B;
+    border-radius: 12px;
+    margin: 15px auto;
+}
+
+.content-section article img,
+.content-section article video {
+    width: 100%;
+    max-width: 550px;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+
+/* =========================================================
+   21. DREAM PAGE
+========================================================= */
+
+.content-section ol {
+    padding-left: 30px;
+}
+
+.content-section ol li {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   22. CONTACT FORM
+========================================================= */
+
+form,
+.contact-form {
+    max-width: 650px;
+    margin: 20px auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #24334B;
+}
+
+.contact-form fieldset {
+    border: 1px solid #D8B97B;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.contact-form legend {
+    color: #24334B;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    border: 1px solid #A8B99A;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    color: #29364B;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #718A69;
+    border-color: #718A69;
+}
+
+.contact-form button {
+    margin-top: 8px;
+}
+
+.form-progress {
+    margin: 20px 0;
+}
+
+.form-progress progress {
+    width: 100%;
+    height: 18px;
+    accent-color: #718A69;
+    margin: 10px 0;
+}
+
+.form-progress label,
+.form-progress span {
+    display: block;
+    color: #24334B;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   23. TEXT LINKS
+========================================================= */
+
+.text-link {
+    color: #718A69;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    color: #24334B;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   24. MARQUEE TEXT
+========================================================= */
+
+.marquee-text {
+    background-color: #E8EEE3;
+    color: #24334B;
+    padding: 12px;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   25. JAVASCRIPT INTERACTION ELEMENTS
+========================================================= */
+
+#currentDate {
+    color: #718A69;
+    font-weight: 600;
+    text-align: center;
+    margin: 15px 0;
+}
+
+#currentYear {
+    color: #D8B97B;
+    font-weight: bold;
+}
+
+#formResponse {
+    margin-top: 15px;
+    padding: 12px;
+    color: #24334B;
+    background-color: #E8EEE3;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   26. FOOTER
+========================================================= */
+
+.site-footer {
+    background-color: #24334B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px;
+    margin-top: 45px;
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================================================
+   27. KEYBOARD ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #D8B97B;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   28. RESPONSIVE DESIGN - TABLETS
+========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    main {
+        width: 94%;
+    }
+
+    .hero {
+        gap: 25px;
+        padding: 30px;
+    }
+
+    .hero-content h2,
+    .hero-text h2 {
+        font-size: 32px;
+    }
+
+    .interest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .education-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-profile {
+        gap: 25px;
+    }
+
+    .about-photo {
+        flex: 0 0 250px;
+    }
+}
+
+
+/* =========================================================
+   29. RESPONSIVE DESIGN - MOBILE PHONES
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Header */
+
+    .site-header {
+        padding: 30px 15px 25px;
+    }
+
+    .site-header h1 {
+        font-size: 32px;
+    }
+
+    .tagline {
+        font-size: 14px;
+    }
+
+
+    /* Navigation */
+
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar li a {
+        padding: 12px;
+    }
+
+    .dropdown-menu,
+    .dropdown-menu .dropdown-menu {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        box-shadow: none;
+    }
+
+    .dropdown-menu li a {
+        background-color: #30435E;
+        white-space: normal;
+    }
+
+    .dropdown-menu .dropdown-menu li a {
+        background-color: #3B526D;
+    }
+
+
+    /* Main content */
+
+    main {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+    .content-section {
+        padding: 22px;
+        margin-top: 20px;
+    }
+
+    .section-heading h2,
+    .content-section h2,
+    .career-section h2 {
+        font-size: 24px;
+    }
+
+
+    /* Homepage hero */
+
+    .hero {
+        flex-direction: column-reverse;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .hero-content h2,
+    .hero-text h2 {
+        font-size: 29px;
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+
+    /* About page */
+
+    .about-profile {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .about-information {
+        text-align: left;
+    }
+
+    .about-photo {
+        flex: 1;
+        width: 100%;
+    }
+
+    .about-photo .profile-image {
+        max-width: 250px;
+        height: 300px;
+    }
+
+
+    /* Galleries and cards */
+
+    .interest-grid,
+    .education-gallery,
+    .gallery-container,
+    .sun-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .sun-gallery img {
+        height: 250px;
+    }
+
+
+    /* Tables */
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .education-table {
+        min-width: 550px;
+    }
+
+
+    /* Career section */
+
+    .career-section {
+        padding: 25px;
+    }
+
+
+    /* Footer */
+
+    .site-footer {
+        padding: 20px 12px;
+    }
+}
+
+
+/* =========================================================
+   30. SMALL MOBILE PHONES
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .site-header h1 {
+        font-size: 27px;
+    }
+
+    .site-label,
+    .section-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .hero {
+        padding: 18px;
+    }
+
+    .hero-content h2,
+    .hero-text h2 {
+        font-size: 25px;
+    }
+
+    .hero-image img {
+        height: 240px;
+    }
+
+    .content-section {
+        padding: 18px;
+    }
+
+    .section-heading h2,
+    .content-section h2,
+    .career-section h2 {
+        font-size: 22px;
+    }
+
+    .primary-button,
+    button {
+        padding: 11px 18px;
+        font-size: 14px;
+    }
+
+    .education-image {
+        height: 220px;
+    }
+
+    .profile-image {
+        width: 190px;
+        height: 190px;
+    }
+}
+
+
+/* =========================================================
+   31. REDUCED MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+

@@ -1,0 +1,170 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Learn about my early education at Kili Primary School.">
+
+    <title>Junior Education | Genet Abebaw</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <h1>My Junior Education</h1>
+        <p class="tagline">The Beginning of My Educational Journey</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="main-navigation">
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="about.html">About Me ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="family.html">Family</a></li>
+
+                    <li class="dropdown">
+                        <a href="education.html">Education ▸</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="junior.html">Junior</a></li>
+                            <li><a href="high-school.html">High School</a></li>
+                            <li><a href="university.html">University</a></li>
+                            <li><a href="skills.html">Skills</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="dream.html">Dream</a></li>
+                </ul>
+            </li>
+
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <section class="content-section">
+
+            <h2>Kili Primary School</h2>
+
+            <img src="images/PS.jpg"
+                 alt="Kili Primary School"
+                 class="education-image">
+
+            <p>
+                Kili Primary School is where my educational
+                journey began. During my early school years,
+                I developed basic knowledge, communication
+                skills, and a love of learning.
+            </p>
+
+            <p>
+                This stage helped me build the foundation
+                for my future education.
+            </p>
+
+            <a href="education.html" class="primary-button">
+                Back to Education Page
+            </a>
+
+        </section>
+
+        <!-- JAVASCRIPT INTERACTION -->
+        <section class="content-section">
+
+            <h2>My Early Learning Journey</h2>
+
+            <p id="juniorMessage">
+                My primary school years gave me the foundation
+                for my educational journey.
+            </p>
+
+            <button type="button" id="juniorMessageBtn">
+                Show Learning Message
+            </button>
+
+            <button type="button" id="backToTopBtn">
+                Back to Top ↑
+            </button>
+
+        </section>
+
+        <!-- CURRENT DATE -->
+        <section class="content-section">
+            <p id="currentDate"></p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>
+            &copy; <span id="currentYear"></span>
+            Genet Abebaw. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- JAVASCRIPT INSIDE HTML -->
+    <script>
+
+        // Display the current date
+        const dateElement = document.getElementById("currentDate");
+        const today = new Date();
+
+        dateElement.textContent =
+            "Today's Date: " + today.toDateString();
+
+
+        // Show a learning message
+        const juniorButton =
+            document.getElementById("juniorMessageBtn");
+
+        juniorButton.addEventListener("click", function () {
+
+            const message =
+                document.getElementById("juniorMessage");
+
+            message.textContent =
+                "Every educational journey starts with a small step. " +
+                "My experience at Kili Primary School helped me " +
+                "build knowledge and prepare for the next stage.";
+
+        });
+
+
+        // Back to top button
+        const topButton =
+            document.getElementById("backToTopBtn");
+
+        topButton.addEventListener("click", function () {
+
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+
+        // Display the current year
+        const yearElement =
+            document.getElementById("currentYear");
+
+        yearElement.textContent = new Date().getFullYear();
+
+    </script>
+
+</body>
+</html>
