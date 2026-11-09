@@ -115,56 +115,7 @@
         </p>
     </footer>
 
-    <!-- JAVASCRIPT INSIDE HTML -->
-    <script>
 
-        // Display the current date
-        const dateElement = document.getElementById("currentDate");
-        const today = new Date();
-
-        dateElement.textContent =
-            "Today's Date: " + today.toDateString();
-
-
-        // Show a learning message
-        const juniorButton =
-            document.getElementById("juniorMessageBtn");
-
-        juniorButton.addEventListener("click", function () {
-
-            const message =
-                document.getElementById("juniorMessage");
-
-            message.textContent =
-                "Every educational journey starts with a small step. " +
-                "My experience at Kili Primary School helped me " +
-                "build knowledge and prepare for the next stage.";
-
-        });
-
-
-        // Back to top button
-        const topButton =
-            document.getElementById("backToTopBtn");
-
-        topButton.addEventListener("click", function () {
-
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: "smooth"
-            });
-
-        });
-
-
-        // Display the current year
-        const yearElement =
-            document.getElementById("currentYear");
-
-        yearElement.textContent = new Date().getFullYear();
-
-    </script>
 
 </body>
 </html>
